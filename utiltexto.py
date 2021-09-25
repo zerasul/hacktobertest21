@@ -16,8 +16,14 @@ class Util_texto:
         """
         pass
 
-    def palabra_mas_larga(self,texto):
+    def palabra_mas_larga(self, texto):
         """
             Devuelve la palabra mas larga
         """
         pass
+
+    def eliminar_vocales(self, texto):
+        vocales = ['a', 'e', 'i', 'o', 'u']
+        return ''.join(
+            [letra for letra in texto.casefold() if letra not in vocales]
+            )
