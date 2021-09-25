@@ -23,7 +23,7 @@ class Util_texto:
         pass
 
     def eliminar_vocales(self, texto):
-        vocales = ['a', 'e', 'i', 'o', 'u']
+        vocales = 'AEIOUÁÉÍÓÚaeiouáéíóú'
         return ''.join(
-            [letra for letra in texto.casefold() if letra not in vocales]
+            [letra for letra in texto if letra not in vocales]
             )
