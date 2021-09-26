@@ -23,7 +23,21 @@ class Util_texto:
         pass
 
     def eliminar_vocales(self, texto):
+        """
+        Dada un texto de entrada, devolvemos el mismo texto sin vocales.
+        :param texto: str
+        :return: str
+        >>> Util_texto().eliminar_vocales('Está lloviendo muchísimo')
+        'st llvnd mchsm'
+        >>> Util_texto().eliminar_vocales('Cayó un rayo en Hogwarts')
+        'Cy n ry n Hgwrts'
+        """
         vocales = 'AEIOUÁÉÍÓÚaeiouáéíóú'
         return ''.join(
             [letra for letra in texto if letra not in vocales]
             )
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
